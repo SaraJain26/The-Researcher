@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "The Researcher Investigation Dossier",
+  "type": "object",
+  "required": [
+    "case_id",
+    "case_metadata",
+    "customer_profile",
+    "account_history",
+    "ip_history",
+    "device_fingerprint",
+    "entity_links",
+    "historical_case_links",
+    "evidence_trace",
+    "research_summary",
+    "evidence_score",
+    "decision_support"
+  ],
+  "properties": {
+    "case_id": { "type": "string" },
+    "case_metadata": { "type": "object" },
+    "customer_profile": { "type": "object" },
+    "account_history": { "type": "object" },
+    "ip_history": { "type": "object" },
+    "device_fingerprint": { "type": "object" },
+    "entity_links": { "type": "object" },
+    "historical_case_links": { "type": "object" },
+    "evidence_trace": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "research_summary": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "evidence_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "decision_support": { "type": "object" }
+  }
+}

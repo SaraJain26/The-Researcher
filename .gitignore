@@ -1,0 +1,3 @@
+__pycache__/
+*.pyc
+sample_data/researcher_demo.db

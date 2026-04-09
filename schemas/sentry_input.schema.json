@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "The Sentry Alert Contract",
+  "type": "object",
+  "required": [
+    "case_metadata",
+    "trigger_source",
+    "alert_summary",
+    "trigger_context",
+    "flagged_transaction"
+  ],
+  "properties": {
+    "case_metadata": {
+      "type": "object",
+      "required": [
+        "case_id",
+        "alert_id",
+        "customer_id",
+        "transaction_id",
+        "created_at"
+      ],
+      "properties": {
+        "case_id": { "type": "string" },
+        "alert_id": { "type": "string" },
+        "customer_id": { "type": "string" },
+        "transaction_id": { "type": "string" },
+        "created_at": { "type": "string", "format": "date-time" }
+      }
+    },
+    "trigger_source": { "type": "string" },
+    "alert_summary": {
+      "type": "object",
+      "required": [
+        "alert_type",
+        "risk_score",
+        "model_name",
+        "model_version",
+        "anomaly_band",
+        "reason_codes"
+      ],
+      "properties": {
+        "alert_type": { "type": "string" },
+        "risk_score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "model_name": { "type": "string" },
+        "model_version": { "type": "string" },
+        "anomaly_band": { "type": "string" },
+        "reason_codes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["code", "description"],
+            "properties": {
+              "code": { "type": "string" },
+              "description": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "trigger_context": {
+      "type": "object",
+      "required": [
+        "current_ip",
+        "current_ip_country",
+        "device_id",
+        "shared_email",
+        "shared_phone",
+        "channel"
+      ],
+      "properties": {
+        "current_ip": { "type": "string" },
+        "current_ip_country": { "type": "string" },
+        "device_id": { "type": "string" },
+        "shared_email": { "type": "string" },
+        "shared_phone": { "type": "string" },
+        "channel": { "type": "string" }
+      }
+    },
+    "flagged_transaction": {
+      "type": "object",
+      "required": [
+        "origin_account",
+        "destination_account",
+        "amount",
+        "currency",
+        "timestamp",
+        "destination_country"
+      ],
+      "properties": {
+        "origin_account": { "type": "string" },
+        "destination_account": { "type": "string" },
+        "amount": { "type": "number" },
+        "currency": { "type": "string" },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "destination_country": { "type": "string" }
+      }
+    }
+  }
+}

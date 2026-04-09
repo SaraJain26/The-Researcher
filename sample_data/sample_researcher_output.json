@@ -1,0 +1,266 @@
+{
+  "case_id": "CASE123",
+  "case_metadata": {
+    "case_id": "CASE123",
+    "alert_id": "ALT789",
+    "customer_id": "CUST001",
+    "transaction_id": "TXN555",
+    "created_at": "2026-04-09T10:15:00Z",
+    "trigger_source": "the_sentry",
+    "research_completed_at": "2026-04-09T11:17:05Z"
+  },
+  "customer_profile": {
+    "customer_name": "Customer 1",
+    "age": 34,
+    "address": "Mumbai, Maharashtra, India",
+    "country": "IN",
+    "occupation": "Trader",
+    "business_type": "Retail",
+    "risk_level": "medium",
+    "kyc_status": "verified",
+    "onboarding_date": "2025-03-14T10:15:00Z",
+    "account_age_days": 391,
+    "onboarding_docs": [
+      {
+        "doc_type": "PAN",
+        "doc_id": "PAN-0001",
+        "verified": 1
+      },
+      {
+        "doc_type": "AADHAAR",
+        "doc_id": "AADHAAR-0001",
+        "verified": 1
+      }
+    ],
+    "pep_match": false,
+    "sanctions_match": false,
+    "recent_profile_changes": [
+      {
+        "field": "address",
+        "changed_at": "2026-04-02T10:20:00Z",
+        "old_value": "Pune, Maharashtra, India",
+        "new_value": "Mumbai, Maharashtra, India"
+      }
+    ]
+  },
+  "account_history": {
+    "accounts": [
+      {
+        "account_id": "ACC0001",
+        "customer_id": "CUST001",
+        "account_type": "checking",
+        "status": "active",
+        "balance": 105319.0,
+        "currency": "INR"
+      }
+    ],
+    "linked_accounts": [
+      "ACC0002",
+      "ACC0003",
+      "ACC0004"
+    ],
+    "transaction_behavior": {
+      "txn_count_30d": 3,
+      "avg_txn_amount_30d": 103900.0,
+      "cross_border_transactions_30d": 1,
+      "recent_beneficiaries": [
+        "Al Noor Trading LLC",
+        "R K Holdings",
+        "SK Exports"
+      ],
+      "new_beneficiaries_7d": 3
+    },
+    "beneficiary_patterns": {
+      "recent_beneficiaries": [
+        "Al Noor Trading LLC",
+        "R K Holdings",
+        "SK Exports"
+      ],
+      "new_beneficiaries_7d": 3,
+      "cross_border_transactions_30d": 1
+    }
+  },
+  "ip_history": {
+    "current_ip": "185.220.101.1",
+    "ip_country": "AE",
+    "usual_countries": [
+      "AE",
+      "IN"
+    ],
+    "recent_login_locations": [
+      "Dubai, AE",
+      "Mumbai, IN",
+      "Mumbai, IN"
+    ],
+    "previous_ip_countries": [
+      "IN",
+      "IN"
+    ],
+    "first_seen_ip": "49.36.22.1",
+    "last_seen_ip": "185.220.101.1",
+    "vpn_suspected": true,
+    "proxy_score": 0.91,
+    "tor_exit_node": true,
+    "asn_name": "Anonymous Proxy Network",
+    "external_enrichment_used": false,
+    "external_geo": null,
+    "ip_country_mismatch": true,
+    "impossible_travel_flag": true
+  },
+  "device_fingerprint": {
+    "device_id": "DEV-44",
+    "browser": "Chrome 124",
+    "os": "Android 15",
+    "emulator_flag": false,
+    "rooted_or_jailbroken_flag": false,
+    "fingerprint_confidence": 0.95,
+    "first_seen_device": "2026-01-09T10:15:00Z",
+    "last_seen_device": "2026-04-09T08:15:00Z",
+    "shared_device_count": 4,
+    "linked_customer_ids": [
+      "CUST001",
+      "CUST002",
+      "CUST003",
+      "CUST004"
+    ],
+    "mule_association_count": 4,
+    "fraud_cluster_score": 0.86
+  },
+  "entity_links": {
+    "email": [
+      {
+        "value": "x@example.com",
+        "linked_customer_count": 3,
+        "linked_customers": [
+          "CUST001",
+          "CUST002",
+          "CUST003"
+        ],
+        "linked_accounts": [
+          "ACC0001",
+          "ACC0002",
+          "ACC0003"
+        ]
+      }
+    ],
+    "phone": [
+      {
+        "value": "+919999999999",
+        "linked_customer_count": 2,
+        "linked_customers": [
+          "CUST001",
+          "CUST002"
+        ],
+        "linked_accounts": [
+          "ACC0001",
+          "ACC0002"
+        ]
+      }
+    ],
+    "address": [
+      {
+        "value": "Mumbai, Maharashtra, India",
+        "linked_customer_count": 1,
+        "linked_customers": [
+          "CUST001"
+        ],
+        "linked_accounts": [
+          "ACC0001"
+        ]
+      }
+    ],
+    "device": [
+      {
+        "value": "DEV-44",
+        "linked_customer_count": 4,
+        "linked_customers": [
+          "CUST001",
+          "CUST002",
+          "CUST003",
+          "CUST004"
+        ],
+        "linked_accounts": [
+          "ACC0001",
+          "ACC0002",
+          "ACC0003",
+          "ACC0004"
+        ]
+      }
+    ]
+  },
+  "historical_case_links": {
+    "prior_alert_count": 2,
+    "prior_sar_count": 0,
+    "prior_case_ids": [
+      "CASE101",
+      "CASE099"
+    ],
+    "closed_cases": 2,
+    "analyst_notes": [
+      "Reviewed for unusual outbound transfer; activity continued under enhanced monitoring.",
+      "Customer explanation accepted after invoice review."
+    ],
+    "disposition_history": [
+      {
+        "case_id": "CASE101",
+        "disposition": "monitor",
+        "status": "closed",
+        "created_at": "2026-03-05T10:15:00Z"
+      },
+      {
+        "case_id": "CASE099",
+        "disposition": "clear",
+        "status": "closed",
+        "created_at": "2026-02-11T10:15:00Z"
+      }
+    ]
+  },
+  "evidence_trace": [
+    {
+      "finding": "Customer KYC profile retrieved",
+      "source_system": "customer_master",
+      "source_record_id": "CUST001",
+      "retrieved_at": "2026-04-09T11:17:05Z",
+      "confidence": 0.99
+    },
+    {
+      "finding": "Flagged transaction context retrieved",
+      "source_system": "transaction_ledger",
+      "source_record_id": "TXN555",
+      "retrieved_at": "2026-04-09T11:17:05Z",
+      "confidence": 0.99
+    },
+    {
+      "finding": "IP intelligence lookup for 185.220.101.1",
+      "source_system": "internal_ip_risk_api",
+      "source_record_id": "185.220.101.1",
+      "retrieved_at": "2026-04-09T11:17:05Z",
+      "confidence": 0.9
+    },
+    {
+      "finding": "Device graph lookup for DEV-44",
+      "source_system": "internal_device_graph_api",
+      "source_record_id": "DEV-44",
+      "retrieved_at": "2026-04-09T11:17:05Z",
+      "confidence": 0.88
+    }
+  ],
+  "research_summary": [
+    "Customer logged in from different countries within a short window, indicating impossible travel.",
+    "Current login IP is associated with VPN or proxy behavior.",
+    "Device has been linked to 4 accounts associated with prior mule-like behavior.",
+    "Alert was triggered by cross_border_velocity with risk score 0.91."
+  ],
+  "evidence_score": 0.91,
+  "decision_support": {
+    "recommended_action": "escalate",
+    "reason_codes": [
+      "CROSS_BORDER_SPIKE",
+      "SHARED_DEVICE_RISK",
+      "VELOCITY_SPIKE",
+      "VPN_OR_PROXY_SIGNAL"
+    ],
+    "requires_manual_review": true,
+    "missing_information": []
+  }
+}

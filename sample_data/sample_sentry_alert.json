@@ -1,0 +1,43 @@
+{
+  "case_metadata": {
+    "case_id": "CASE123",
+    "alert_id": "ALT789",
+    "customer_id": "CUST001",
+    "transaction_id": "TXN555",
+    "created_at": "2026-04-09T10:15:00Z"
+  },
+  "trigger_source": "the_sentry",
+  "alert_summary": {
+    "alert_type": "cross_border_velocity",
+    "risk_score": 0.91,
+    "model_name": "sentry_gradient_boost_v3",
+    "model_version": "3.2.1",
+    "anomaly_band": "high",
+    "reason_codes": [
+      {
+        "code": "CROSS_BORDER_SPIKE",
+        "description": "Rapid increase in cross-border transfer activity."
+      },
+      {
+        "code": "VELOCITY_SPIKE",
+        "description": "Transaction velocity exceeded customer baseline."
+      }
+    ]
+  },
+  "trigger_context": {
+    "current_ip": "185.220.101.1",
+    "current_ip_country": "AE",
+    "device_id": "DEV-44",
+    "shared_email": "x@example.com",
+    "shared_phone": "+919999999999",
+    "channel": "mobile_app"
+  },
+  "flagged_transaction": {
+    "origin_account": "ACC0001",
+    "destination_account": "BEN9001",
+    "amount": 9500.0,
+    "currency": "USD",
+    "timestamp": "2026-04-09T09:45:00Z",
+    "destination_country": "AE"
+  }
+}

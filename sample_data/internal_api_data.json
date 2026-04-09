@@ -1,0 +1,39 @@
+{
+  "case_annotations": {
+    "CUST001": {
+      "customer_id": "CUST001",
+      "analyst_watchlist": false,
+      "recent_profile_changes": [
+        {
+          "field": "address",
+          "changed_at": "2026-04-02T10:20:00Z",
+          "old_value": "Pune, Maharashtra, India",
+          "new_value": "Mumbai, Maharashtra, India"
+        }
+      ],
+      "adverse_media_hits": []
+    }
+  },
+  "ip_intelligence": {
+    "49.36.22.1": {
+      "vpn_suspected": false,
+      "proxy_score": 0.04,
+      "tor_exit_node": false,
+      "asn_name": "Jio Broadband"
+    },
+    "185.220.101.1": {
+      "vpn_suspected": true,
+      "proxy_score": 0.91,
+      "tor_exit_node": true,
+      "asn_name": "Anonymous Proxy Network"
+    }
+  },
+  "device_risk": {
+    "DEV-44": {
+      "device_id": "DEV-44",
+      "mule_association_count": 4,
+      "fraud_cluster_score": 0.86,
+      "is_emulator_like": false
+    }
+  }
+}
